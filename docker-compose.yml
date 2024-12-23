@@ -1,0 +1,8 @@
+services:
+  almalinux:
+    build:
+      context: .
+    container_name: almalinux
+    tty: true
+    ports:
+      - "2222:22"
