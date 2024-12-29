@@ -1,7 +1,7 @@
 FROM almalinux:latest
 
 RUN dnf -y update && \
-  dnf -y install sudo passwd vim wget net-tools iputils iproute bash-completion openssh-server man man-pages bind-utils && \
+  dnf -y install sudo passwd vim wget net-tools iputils iproute bash-completion openssh-server man man-pages bind-utils procps && \
   dnf clean all
 
 RUN mkdir /var/run/sshd && \
