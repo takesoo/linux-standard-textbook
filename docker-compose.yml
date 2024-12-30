@@ -5,4 +5,7 @@ services:
     container_name: almalinux
     tty: true
     ports:
-      - "2222:22"
+      - "2222:22" # sshのポート
+      - "8080:80" # apacheのポート
+    privileged: true # 特権モードでコンテナを起動。systemdを起動するために必要
+    command: /sbin/init # PID=1にinitプロセスを設定。systemdを起動するために必要
